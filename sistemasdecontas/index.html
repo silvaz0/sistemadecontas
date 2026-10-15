@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas do mês</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="pagina">
+        <header>
+            <h1>Contas do mês</h1>
+            <p class="subtitulo">Registre seus gastos e veja quanto ainda falta pagar.</p>
+        </header>
+        <section class="totais">
+            <div class="cartao">
+                <p class="rotulo">Valor geral do mês</p>
+                <p class="numero">R$ 0,00</p>
+            </div>
+            <div class="cartao cartao-destaque">
+                <p class="rotulo">Falta pagar</p>
+                <p class="numero" id="total-restante">R$ 0,00</p>
+            </div>
+        </section>
+
+        <form id="formulario" class="formulario">
+            <div class="campo">
+                <label for="descricao">Descrição</label>
+                <input type="text" name="descricao" id="descricao" placeholder="Ex. Conta de Luz">
+            </div>
+
+            <div class="campo">
+                <label for="valor">Valor (R$)</label>
+                <input type="text" name="valor" id="valor" placeholder="0,00" inputmode="decimal">
+            </div>
+
+            <div class="campo">
+              <label for="vencimento">Vencimento</label>
+              <input type="date" name="vencimento" id="vencimento">
+           </div>
+
+          <button type="submit" class="botao">Adicionar</button>
+        </form>
+        <section>
+            <h2>Gastos do mês</h2>
+            <ul id="lista" class="lista"></ul>
+            <p id="aviso-vasio" class="aviso">Nenhum gasto cadastrado ainda. Adicione o primeiro acima!</p>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
